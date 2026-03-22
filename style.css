@@ -1,0 +1,983 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    color: #333;
+    background-color: #f9f9f9;
+    scroll-behavior: smooth;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  
+  /* Header Styling */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #6a0dad;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #6a0dad;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hero Section Styling */
+  .hero {
+    position: relative;
+    height: 100vh;
+    background-color: #6a0dad;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s ease;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff7f50;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ff6347;
+  }
+  
+  /* Wave Animation */
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url('https://cdn.svgator.com/images/2022/01/wave-animation.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 60px;
+      right: 40px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  
+    .btn {
+      font-size: 1rem;
+      padding: 10px 25px;
+    }
+  }
+
+  /* About Me Section */
+.about {
+  padding: 100px 40px;
+  background-color: #f9f9f9;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about strong {
+  color: #6a0dad;
+}
+
+/* Image Styling with Hover Zoom Effect */
+.about-image {
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+/* Strengths Section */
+.strengths {
+  padding: 100px 40px;
+  background-color: #f3f1f5;
+}
+
+.strengths h2 {
+  font-size: 2.5rem;
+  color: #6a0dad;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Strength Item */
+.strength {
+  margin-bottom: 20px;
+}
+
+.strength-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #e0e0e0;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff7f50, #6a0dad);
+  width: 0;
+  border-radius: 30px;
+  transition: width 1s ease;
+}
+
+/* Animation for Filling Progress Bar */
+.strength .progress-fill {
+  animation: fillProgress 1.5s forwards;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .strength-label {
+    font-size: 1rem;
+  }
+
+  .progress-bar {
+    height: 10px;
+  }
+
+  .strengths h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Education Section */
+.education {
+  padding: 100px 40px;
+  background-color: #f9f9f9;
+}
+
+.education h2 {
+  font-size: 2.5rem;
+  color: #6a0dad;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: #6a0dad;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  padding: 20px;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  text-align: right;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #ff7f50;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Timeline Content */
+.timeline-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  color: #6a0dad;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.timeline-content span {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Hover Effect */
+.timeline-content:hover {
+  transform: translateY(-5px);
+  background-color: #fafafa;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: row;
+    padding-left: 40px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  .timeline-item:nth-child(even) .timeline-content {
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 20px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 40px);
+  }
+
+  .education h2 {
+    font-size: 2rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content p, .timeline-content span {
+    font-size: 1rem;
+  }
+}
+
+/* Career & Skills Section */
+.career {
+  padding: 100px 40px;
+  background-color: #f3f1f5;
+}
+
+.career h2 {
+  font-size: 2.5rem;
+  color: #6a0dad;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Achievements */
+.career-achievements {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.career-achievements p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.career-achievements strong {
+  color: #6a0dad;
+}
+
+/* Skills */
+.skills h3 {
+  font-size: 2rem;
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+/* Skill Item */
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill span {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 16px;
+  background-color: #e0e0e0;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff7f50, #6a0dad);
+  text-align: right;
+  padding-right: 10px;
+  line-height: 16px;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  width: 0;
+  transition: width 1.2s ease;
+}
+
+/* Animation for Filling Progress Bar */
+.skill .progress-fill {
+  animation: fillProgress 1.5s forwards;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+}
+
+/* Hover Effect */
+.progress-bar:hover .progress-fill {
+  background: linear-gradient(90deg, #6a0dad, #ff7f50);
+  transition: background 0.4s ease;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .career h2 {
+    font-size: 2rem;
+  }
+
+  .career-achievements p {
+    font-size: 1rem;
+  }
+
+  .skills h3 {
+    font-size: 1.5rem;
+  }
+
+  .skill span {
+    font-size: 1rem;
+  }
+
+  .progress-bar {
+    height: 14px;
+  }
+
+  .progress-fill {
+    line-height: 14px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Projects Section */
+.projects {
+  padding: 100px 40px;
+  background-color: #f9f9f9;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  color: #6a0dad;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Project Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Project Card */
+.project-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(106, 13, 173, 0.2);
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  color: #6a0dad;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* View Project Link */
+.project-content a {
+  display: inline-block;
+  color: #6a0dad;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-content a:hover {
+  color: #ff7f50;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .projects h2 {
+    font-size: 2rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Hobbies & Interests Section */
+.hobbies {
+  padding: 100px 40px;
+  background-color: #f3f1f5;
+}
+
+.hobbies h2 {
+  font-size: 2.5rem;
+  color: #6a0dad;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Hobbies Grid */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Hobby Card */
+.hobby-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hobby-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(106, 13, 173, 0.2);
+}
+
+/* Hobby Icon */
+.hobby-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.hobby-card:hover .hobby-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Hobby Title */
+.hobby-card h3 {
+  font-size: 1.5rem;
+  color: #6a0dad;
+  margin-bottom: 10px;
+}
+
+/* Hobby Description */
+.hobby-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Hover Animation */
+.hobby-card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #6a0dad, #ff7f50);
+  opacity: 0.1;
+  transition: top 0.4s ease;
+}
+
+.hobby-card:hover::before {
+  top: 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .hobbies h2 {
+    font-size: 2rem;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hobby-icon {
+    font-size: 2.5rem;
+  }
+
+  .hobby-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .hobby-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Goals Section */
+.goals {
+  padding: 100px 40px;
+  background-color: #f9f9f9;
+}
+
+.goals h2 {
+  font-size: 2.5rem;
+  color: #6a0dad;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Goal Container */
+.goal {
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(106, 13, 173, 0.2);
+}
+
+.goal-info h3 {
+  font-size: 1.5rem;
+  color: #6a0dad;
+  margin-bottom: 10px;
+}
+
+.goal-info p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #6a0dad;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: width 0.5s ease;
+}
+
+/* Hover Animation */
+.goal:hover .progress {
+  background-color: #ff7f50;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .goals h2 {
+    font-size: 2rem;
+  }
+
+  .goal-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .goal-info p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Contact Section */
+.contact {
+  padding: 100px 40px;
+  background-color: #f3f1f5;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Form Styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6a0dad;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Send Button */
+.send-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #6a0dad;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(106, 13, 173, 0.2);
+}
+
+.send-btn:hover {
+  background-color: #ff7f50;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.95rem;
+  }
+
+  .send-btn {
+    font-size: 0.95rem;
+  }
+}
+
+/* Footer Section */
+.footer {
+  background-color: #6a0dad;
+  color: #ffffff;
+  padding: 20px 40px;
+  text-align: center;
+  position: relative;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff7f50;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}
